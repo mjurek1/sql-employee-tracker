@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS employeetracker_db;
 CREATE DATABASE employeetracker_db;
--- USE employeetracker_db;
+-- USE employeeTracker_db;
 \c employeetracker_db
 
 CREATE TABLE department (
@@ -17,18 +17,18 @@ CREATE TABLE role (
     FOREIGN KEY (department_id)
     REFERENCES department(id)
     ON DELETE SET NULL
-);
+    );
 
-CREATE TABLE employee (
-    id SERIAL PRIMARY KEY
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    role_id INT,
-    constraint fk_role
-    FOREIGN KEY (role_id)
-    REFERENCES role(id),
-    manager_id INT,
-    constraint fk_manager
-    FOREIGN KEY (manager_id)
-    REFERENCES employee(id)
-);
+    CREATE TABLE employee (
+        id SERIAL PRIMARY KEY,
+        first_name VARCHAR(30) NOT NULL,
+        last_name VARCHAR(30) NOT NULL,
+        role_id INT,
+        constraint fk_role
+        FOREIGN KEY (role_id)
+        REFERENCES role(id),
+        manager_id INT,
+        constraint fk_manager
+        FOREIGN KEY (manager_id)
+        REFERENCES employee(id)
+    );
