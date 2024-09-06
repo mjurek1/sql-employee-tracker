@@ -48,3 +48,6 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Recording
+[Demo](https://app.screencastify.com/v3/watch/42wt4bs0etO3O5oI9s4s)
