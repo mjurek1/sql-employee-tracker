@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS employeetracker_db;
 CREATE DATABASE employeetracker_db;
--- USE employeeTracker_db;
 \c employeetracker_db
 
 CREATE TABLE department (
